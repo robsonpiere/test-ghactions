@@ -17,6 +17,5 @@ jobs:
         run: |
           echo $TAG
           echo ${{ env.TAG }}
-          echo ${{TAG }}
       - run: python hi.py
 
