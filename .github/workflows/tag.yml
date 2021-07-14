@@ -2,7 +2,7 @@ name: Teste tag
 on:
   push:
     tags:
-      - '*'
+      - '*.*.*'
     branches-ignore:
       - "teste"
 jobs:
