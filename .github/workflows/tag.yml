@@ -15,7 +15,8 @@ jobs:
         run: echo "TAG=${GITHUB_REF#refs/*/}" >> $GITHUB_ENV
       - name: show Tag
         run: |
-          echo $RELEASE_VERSION
-          echo ${{ env.RELEASE_VERSION }}
+          echo $TAG
+          echo ${{ env.TAG }}
+          echo ${{TAG }}
       - run: python hi.py
 
