@@ -1,0 +1,12 @@
+name: Teste tag
+on:
+  push:
+    tags:
+      - '*'
+jobs:
+  hi:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-python@v2
+      - run: python hi.py
