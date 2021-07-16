@@ -2,13 +2,21 @@ name: Teste tag
 on:
   push:
     tags:
-      - '*'
+      - '*.*.*'
     branches-ignore:
       - "teste"
+  workflow_dispatch:
 jobs:
   hi:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-python@v2
+      - name: GET commit Tag
+        run: echo "${TAG}=${GITHUB_REF#refs/*/}" >> $GITHUB_ENV
+      - name: show Tag
+        run: |
+          echo $TAG
+          echo ${{ env.TAG }}
       - run: python hi.py
+
