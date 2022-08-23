@@ -1,0 +1,25 @@
+name: Release
+on:
+  release:
+    types: [created]
+env:
+    TAG: ${{ github.event.release.tag_name }}
+jobs:
+  teste:
+    name: teste
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Tag in make
+        run: make show-version
+
+      - name: Tag in bash
+        run: |
+          echo $TAG
+          echo ${{ env.TAG }}
+
+      - name: TAG in script
+        run: python hi.py
