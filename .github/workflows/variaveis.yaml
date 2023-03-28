@@ -11,5 +11,6 @@ jobs:
         run: |
             echo $VARIAVEL
             echo ${{ env.VARIAVEL }}
+            echo ${{vars.VARIAVEL}}
       - name: VARIAVEL in script
         run: python hi.py
