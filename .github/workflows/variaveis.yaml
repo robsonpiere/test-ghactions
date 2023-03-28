@@ -4,9 +4,10 @@ on:
 jobs:
   show-vars:
     runs-on: ubuntu-latest
+    steps:
       - name: Show VARIAVEL
-      run: |
-        echo $VARIAVEL
-        echo ${{ env.VARIAVEL }}
+        run: |
+            echo $VARIAVEL
+            echo ${{ env.VARIAVEL }}
       - name: VARIAVEL in script
         run: python hi.py
