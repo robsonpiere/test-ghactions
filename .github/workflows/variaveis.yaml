@@ -1,0 +1,12 @@
+name: Teste de variaveis
+on:
+  push:
+jobs:
+  show-vars:
+    runs-on: ubuntu-latest
+      - name: Show VARIAVEL
+        run: |
+          echo $VARIAVEL
+          echo ${{ env.VARIAVEL }}
+      - name: VARIAVEL in script
+        run: python hi.py
