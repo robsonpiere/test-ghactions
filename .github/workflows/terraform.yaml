@@ -1,0 +1,19 @@
+name: terraform
+on:
+  push:
+    branches:
+      - "*"
+  pull_request:
+    types: [opened, synchronize, reopened]
+jobs:
+  test-terraform:
+    name: Lint do Terraform
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Setup Terraform
+        uses: hashicorp/setup-terraform@v2
+        with:
+          terraform_version: 1.5
