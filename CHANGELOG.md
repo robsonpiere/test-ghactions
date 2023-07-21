@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.1](https://github.com/robsonpiere/test-ghactions/compare/v0.2.0...v0.2.1) (2023-07-21)
+
+
+### 🐛 Bug Fixes
+
+* release action ([38fe535](https://github.com/robsonpiere/test-ghactions/commit/38fe535bc5075fd774c26f09880ab6fda2926a1a))
+
 ## [0.2.0](https://github.com/robsonpiere/test-ghactions/compare/v0.1.2...v0.2.0) (2023-07-21)
 
 
