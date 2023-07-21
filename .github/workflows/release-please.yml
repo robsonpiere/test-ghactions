@@ -12,8 +12,12 @@ name: release-please
 jobs:
   release:
     runs-on: ubuntu-latest
+    outputs:
+      release_created: ${{ steps.release.outputs.release_created }}
+      release_name: ${{ steps.release.outputs.release_created }}
     steps:
       - uses: google-github-actions/release-please-action@v3
+        id: release
         with:
           release-type: python
           package-name: release-please-action
@@ -39,5 +43,5 @@ jobs:
     - name: show info
       run: |
         echo "Release generated"
-        echo "release_created: ${{  steps.release.outputs.release_created }}"
-        echo "tag_name: ${{  steps.release.outputs.tag_name }}"
+        echo "release_created: ${{  needs.release.outputs.release_created }}"
+        echo "tag_name: ${{  needs.release.outputs.tag_name }}"
