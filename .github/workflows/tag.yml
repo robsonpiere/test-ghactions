@@ -3,20 +3,20 @@ on:
   push:
     tags:
       - '*.*.*'
-    branches-ignore:
-      - "teste"
   workflow_dispatch:
+env:
+  TAG: ${{ github.ref_name }}
 jobs:
   hi:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-python@v2
-      - name: GET commit Tag
-        run: echo "${TAG}=${GITHUB_REF#refs/*/}" >> $GITHUB_ENV
-      - name: show Tag
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v4
+      - name: GitHub Tag Name example
         run: |
-          echo $TAG
-          echo ${{ env.TAG }}
+          echo "Tag name from GITHUB_REF_NAME: $GITHUB_REF_NAME"
+          echo "Tag name from github.ref_name: ${{  github.ref_name }}"
       - run: python hi.py
+        env:
+          tag:
 

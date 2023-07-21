@@ -1,7 +1,6 @@
 name: Release
 on:
   release:
-    types: [released]
 env:
     TAG: ${{ github.event.release.tag_name }}
 jobs:
