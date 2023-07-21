@@ -9,5 +9,17 @@ jobs:
     runs-on: ubuntu-latest
     if: ${{ github.event.workflow_run.conclusion == 'success' }}
     steps:
-      - name: Step 1
-        run: echo "Running Action 2"
+        - name: Checkout code
+          uses: actions/checkout@v3
+
+        - name: Fetch tags
+          run: git fetch --tags --prune --progress origin
+
+        - name: Get the last tag
+          id: get_last_tag
+          run: |
+           latest_tag=$(git describe --abbrev=0 --tags)
+           echo "::set-output name=latest_tag::$latest_tag"
+
+        - name: Print the last tag
+          run: echo "The last tag is ${{ steps.get_last_tag.outputs.latest_tag }}"
