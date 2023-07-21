@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.1.2](https://github.com/robsonpiere/test-ghactions/compare/v0.1.1...v0.1.2) (2023-07-21)
+
+
+### Bug Fixes
+
+* dont use tag ([088b526](https://github.com/robsonpiere/test-ghactions/commit/088b5260f3332fcc82d4a480d3e7f964e941119c))
+* new tag syntax ([c2ceb70](https://github.com/robsonpiere/test-ghactions/commit/c2ceb705eb9097b84bf7f9eb1ca52ad121e33bd0))
+
 ## [0.1.1](https://github.com/robsonpiere/test-ghactions/compare/v0.1.0...v0.1.1) (2023-07-21)
 
 
