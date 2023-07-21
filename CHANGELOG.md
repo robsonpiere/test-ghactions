@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.0](https://github.com/robsonpiere/test-ghactions/compare/v0.1.2...v0.2.0) (2023-07-21)
+
+
+### 🚀 Features
+
+* fake feature 2, ([ef83050](https://github.com/robsonpiere/test-ghactions/commit/ef830500785a53f9b8a67ca5cdeac90437fdc1b6))
+
 ## [0.1.2](https://github.com/robsonpiere/test-ghactions/compare/v0.1.1...v0.1.2) (2023-07-21)
 
 
