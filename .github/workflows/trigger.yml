@@ -1,0 +1,13 @@
+name: Action 2
+on:
+  workflow_run:
+    workflows: ["release-please"]
+    types:
+      - completed
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+    steps:
+      - name: Step 1
+        run: echo "Running Action 2"
