@@ -1,0 +1,32 @@
+name: Get Last Tag
+
+on:
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: 'Tag name (optional)'
+        required: false
+
+jobs:
+  get_last_tag:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Get the last tag
+        id: get_last_tag
+        run: |
+          if [ -n "${{ github.event.inputs.tag }}" ]; then
+            echo "Tag passed as parameter: ${{ github.event.inputs.tag }}"
+            last_tag="${{ github.event.inputs.tag }}"
+          else
+            echo "No tag parameter provided. Fetching the last tag..."
+            git fetch --tags --prune --progress origin
+            last_tag=$(git describe --abbrev=0 --tags)
+          fi
+          echo "::set-output name=last_tag::$last_tag"
+
+      - name: Print the last tag
+        run: echo "The last tag is ${{ steps.get_last_tag.outputs.last_tag }}"
