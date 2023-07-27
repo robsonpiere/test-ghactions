@@ -37,14 +37,31 @@ jobs:
               {"type": "style", "section": "💄 Styles", "hidden": true},
               {"type": "test", "section": "✅ Tests", "hidden": true}
             ]
-  after-merge:
+
+  deploy_test:
     runs-on: ubuntu-latest
+    environment: test
     needs: release
     # only run when a new release is created
     if: ${{ needs.release.outputs.release_created }}
     steps:
     - name: show info
       run: |
-        echo "Release generated"
+        echo "Deploy in test"
+        echo "release_created: ${{ needs.release.outputs.release_created }}"
+        echo "tag_name: ${{ needs.release.outputs.tag_name }}"
+
+  deploy_prod:
+    runs-on: ubuntu-latest
+    environment:
+      name: prod
+      url: "https://github.com/${{github.respository}}"
+    needs: [release, deploy_test]
+    # only run when a new release is created
+    if: ${{ needs.release.outputs.release_created }}
+    steps:
+    - name: show info
+      run: |
+        echo "Deploy in prod"
         echo "release_created: ${{ needs.release.outputs.release_created }}"
         echo "tag_name: ${{ needs.release.outputs.tag_name }}"
