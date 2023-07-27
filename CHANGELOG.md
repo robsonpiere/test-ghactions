@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.3.0](https://github.com/robsonpiere/test-ghactions/compare/v0.2.2...v0.3.0) (2023-07-27)
+
+
+### 🚀 Features
+
+* test env deploy ([c4622c6](https://github.com/robsonpiere/test-ghactions/commit/c4622c6a9e691f78fcc827c11d44c77fa40c79f7))
+
 ## [0.2.2](https://github.com/robsonpiere/test-ghactions/compare/v0.2.1...v0.2.2) (2023-07-21)
 
 
