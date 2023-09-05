@@ -1,0 +1,17 @@
+name: Show commit sha
+on:
+  push:
+
+jobs:
+  build_and_push:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Get sha
+        id: sha
+        run: echo ::set-output name=sha::${GITHUB_SHA:0:8}
+
+      - name: Show sha
+        run: echo ${{ steps.sha.outputs.sha }}
