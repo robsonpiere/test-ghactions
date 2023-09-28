@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.4.0](https://github.com/robsonpiere/test-ghactions/compare/v0.3.0...v0.4.0) (2023-09-28)
+
+
+### 🚀 Features
+
+* add data ([7894599](https://github.com/robsonpiere/test-ghactions/commit/78945992f18b21a7d81af795498fbbbfce143ce0))
+
 ## [0.3.0](https://github.com/robsonpiere/test-ghactions/compare/v0.2.2...v0.3.0) (2023-07-27)
 
 
