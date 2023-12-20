@@ -1,5 +1,23 @@
 # Changelog
 
+## [0.5.0](https://github.com/robsonpiere/test-ghactions/compare/v0.4.0...v0.5.0) (2023-12-20)
+
+
+### 🚀 Features
+
+* add manisfest file ([4ad4ae5](https://github.com/robsonpiere/test-ghactions/commit/4ad4ae5f918a00fb0376c922425861c60fac89b3))
+* add new vesion of relase please ([7bd577d](https://github.com/robsonpiere/test-ghactions/commit/7bd577d3b0de20970f7536713a6ea2c178988cb0))
+
+
+### 🐛 Bug Fixes
+
+* add config for package ([bb54697](https://github.com/robsonpiere/test-ghactions/commit/bb546972cb73a208b829a6d79a2f38b4d6da1086))
+* add manifest file ([631454d](https://github.com/robsonpiere/test-ghactions/commit/631454d0117fd5aa30cbb09c4bccca6bb62c7284))
+* manifest version ([7984283](https://github.com/robsonpiere/test-ghactions/commit/798428382bee13f1a844e7b72c9c8cd5f2fe259b))
+* test version in manifest ([827d1b1](https://github.com/robsonpiere/test-ghactions/commit/827d1b1a9534aa3b11dd2740447006333dd48afb))
+* usa um json vazio ([b767e73](https://github.com/robsonpiere/test-ghactions/commit/b767e73d536cdec3beb3b5025fed13016d80f0ce))
+* use empty manifest ([48dc8b6](https://github.com/robsonpiere/test-ghactions/commit/48dc8b6c0c59488820cc2da5e2ce6dab905f7ac0))
+
 ## 0.1.0 (2023-12-20)
 
 
