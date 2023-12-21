@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.6.0](https://github.com/robsonpiere/test-ghactions/compare/v0.5.0...v0.6.0) (2023-12-21)
+
+
+### 🚀 Features
+
+* add empty readme md ([178def3](https://github.com/robsonpiere/test-ghactions/commit/178def3d89612981ae5419c054e05afe8d072c5e))
+
 ## [0.5.0](https://github.com/robsonpiere/test-ghactions/compare/v0.4.0...v0.5.0) (2023-12-20)
 
 
